@@ -34,7 +34,7 @@ public class AppTest123 {
 	public WebDriver driver;
 
 	
-	@Parameters({"browser"})
+	//@Parameters({"browser"})
 	@BeforeTest
 	public void launchBrowser(String brw) {
 		
@@ -57,7 +57,7 @@ public class AppTest123 {
 			
 		System.setProperty("webdriver.gecko.driver", "D:\\NoukriGmailBigBoss\\DriversFFGC\\geckodriver.exe");
 			
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver();   
 		
 			driver.manage().window().maximize();
 			
@@ -201,6 +201,5 @@ public class AppTest123 {
 		driver.quit();
 		
 	}
-
 
 }
