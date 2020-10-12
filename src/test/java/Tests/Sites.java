@@ -125,7 +125,7 @@ public class Sites {
 	@AfterSuite
 	public void close() {
 		
-		driver.quit();
+		driver.quit();//It will close all the browser which is opened by the selenium webdriver
 		
 	}
 	
