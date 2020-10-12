@@ -134,7 +134,7 @@ public class AppTest {
 			
 		}
 		else {
-			Assert.assertFalse(false);
+			Assert.assertFalse(false);// This is hard Assert
 			
 		
 		}
@@ -143,7 +143,7 @@ public class AppTest {
 	@AfterTest
 	public void close() {
 	
-		driver.quit();
+		driver.quit();// It will close all the browsers
 		
 	}
 
