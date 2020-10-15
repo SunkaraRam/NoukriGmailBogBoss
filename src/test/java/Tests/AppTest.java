@@ -43,7 +43,7 @@ public class AppTest {
 			
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
-			driver.manage().deleteAllCookies();
+			driver.manage().deleteAllCookies(); // Here we are deleting cookies
 	
 		}
 		
@@ -68,7 +68,7 @@ public class AppTest {
 		//Assert.assertEquals(res, true);
 		
 		if (res) {
-			Assert.assertTrue(res);
+			Assert.assertTrue(res);//If It is getting feild it won't go to next step. Execution will stop.
 			
 		}
 		else {
