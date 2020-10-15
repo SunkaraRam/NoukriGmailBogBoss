@@ -159,7 +159,7 @@ public class AppTest123 {
 		
 		prt.load(fi);
 
-		driver.get(prt.getProperty("bigbossurl"));
+		driver.get(prt.getProperty("bigbossurl"));// Here we are getting base url of the application
 		
 		WebElement Rahul =  driver.findElement(By.xpath("//span[@id='pds-answer10415372']/child::span[5]//child::label"));
 		

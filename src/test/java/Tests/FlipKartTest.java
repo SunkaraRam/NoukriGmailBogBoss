@@ -20,7 +20,7 @@ public class FlipKartTest{
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "d://chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\LatestDrivers\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -84,7 +84,7 @@ public class FlipKartTest{
 				
 				js.executeScript("arguments[0].scrollIntoView()",fp.dragToDelivery);
 			
-				fp.shoeSize.click();
+				fp.shoeSize.click();//comment added
 				
 				fp.buyNow.click();
 				

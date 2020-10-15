@@ -56,7 +56,7 @@ public class Sites {
 		
 		GmailPage gp = PageFactory.initElements(driver, GmailPage.class);
 		
-		boolean res = gp.GmailLogin();
+		boolean res = gp.GmailLogin();// It will return boolean condition
 		
 		//Assert.assertEquals(res, true);
 		
