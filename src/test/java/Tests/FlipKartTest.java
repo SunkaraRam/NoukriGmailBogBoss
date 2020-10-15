@@ -84,7 +84,7 @@ public class FlipKartTest{
 				
 				js.executeScript("arguments[0].scrollIntoView()",fp.dragToDelivery);
 			
-				fp.shoeSize.click();
+				fp.shoeSize.click();//comment added
 				
 				fp.buyNow.click();
 				
