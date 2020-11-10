@@ -5,9 +5,7 @@
     <classes>
       <class name="Tests.AppTest123">
         <methods>
-          <include name="bigBossVote"/>
-          <include name="launchBrowser"/>
-          <include name="close"/>
+          <include name="noukriTest"/>
         </methods>
       </class> <!-- Tests.AppTest123 -->
     </classes>
