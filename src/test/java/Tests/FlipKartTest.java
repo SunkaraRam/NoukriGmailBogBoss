@@ -80,7 +80,7 @@ public class FlipKartTest{
 			
 			if (!parent.equalsIgnoreCase(ch)) {
 	
-				driver.switchTo().window(ch);
+				driver.switchTo().window(ch);//Here we are swiching each and every window
 				
 				js.executeScript("arguments[0].scrollIntoView()",fp.dragToDelivery);
 			

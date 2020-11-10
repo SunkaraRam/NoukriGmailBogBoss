@@ -209,8 +209,10 @@ public class AppTest123 {
 //		}
 //		else {
 //			Assert.assertFalse(false);
-//			test.log(LogStatus.FAIL, "Big Boss Vote Fail");
-//				
+
+//			test.log(LogStatus.FAIL, "Big Boss Vote Fail");// Here we are checking bigboss Assertion
+//			
+//		
 //		}
 	}
 	
