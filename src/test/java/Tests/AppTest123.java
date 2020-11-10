@@ -34,57 +34,67 @@ public class AppTest123 {
 	public WebDriver driver;
 
 	
-	//@Parameters({"browser"})
-	@BeforeTest
-	public void launchBrowser(String brw) {
-		
-		if (brw.equalsIgnoreCase("chrome")) {
-	
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-			
-			driver = new ChromeDriver();
-		
-			driver.manage().window().maximize();
-			
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			
-			driver.manage().deleteAllCookies();
-			
-			//driver.get("https://google.com");
-		}
-		
-		 if(brw.equalsIgnoreCase("Firefox")) {
-			
-		System.setProperty("webdriver.gecko.driver", "D:\\NoukriGmailBigBoss\\DriversFFGC\\geckodriver.exe");
-			
-			driver = new FirefoxDriver();   
-		
-			driver.manage().window().maximize();
-			
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			
-			driver.manage().deleteAllCookies();			
-		}
-		
-		else if(brw.equalsIgnoreCase("ie")) {
-			
-			System.setProperty("webdriver.ie.driver", "D:\\IEDriverServer.exe");
-				
-				driver = new InternetExplorerDriver();
-			
-				driver.manage().window().maximize();
-				
-				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-				
-				driver.manage().deleteAllCookies();	
-			}
-		}
-	
+//	//@Parameters({"browser"})
+//	@BeforeTest
+//	public void launchBrowser(String brw) {
+//		
+////		if (brw.equalsIgnoreCase("chrome")) {
+////	
+////			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+////			
+////			driver = new ChromeDriver();
+////		
+////			driver.manage().window().maximize();
+////			
+////			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+////			
+////			driver.manage().deleteAllCookies();
+////			
+////			//driver.get("https://google.com");
+////		}
+////		
+////		 if(brw.equalsIgnoreCase("Firefox")) {
+////			
+////		System.setProperty("webdriver.gecko.driver", "D:\\NoukriGmailBigBoss\\DriversFFGC\\geckodriver.exe");
+////			
+////			driver = new FirefoxDriver();   
+////		
+////			driver.manage().window().maximize();
+////			
+////			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+////			
+////			driver.manage().deleteAllCookies();			
+////		}
+//		
+////		if(brw.equalsIgnoreCase("ie")) {
+////			
+////			System.setProperty("webdriver.ie.driver", "D:\\IEDriverServer.exe");
+////				
+////				driver = new InternetExplorerDriver();
+////			
+////				driver.manage().window().maximize();
+////				
+////				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+////				
+////				driver.manage().deleteAllCookies();	
+////			}
+//		}
+//	
 	
 	
 	
 	@Test(enabled=false)
 	public void gmailTest() throws Throwable {
+		
+		System.setProperty("webdriver.ie.driver", "C:\\Users\\SunkaraRam\\Desktop\\Display\\IEDriverServer.exe");
+	
+	driver = new InternetExplorerDriver();
+
+	driver.manage().window().maximize();
+	
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+	driver.manage().deleteAllCookies();	
 				
 		FileInputStream fi = new FileInputStream("D:\\NoukriGmailBigBoss\\PropertiesFile\\constants.properties");
 
@@ -114,8 +124,19 @@ public class AppTest123 {
 		
 		System.out.println(res1);
 	}
-	@Test(enabled=false)
+	@Test
 	public void noukriTest() throws Throwable {
+		
+		
+		System.setProperty("webdriver.ie.driver", "C:\\Users\\SunkaraRam\\Desktop\\Display\\IEDriverServer.exe");
+	
+	driver = new InternetExplorerDriver();
+
+	driver.manage().window().maximize();
+	
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+	driver.manage().deleteAllCookies();	
 		
 		FileInputStream fi = new FileInputStream("D:\\NoukriGmailBigBoss\\PropertiesFile\\constants.properties");
 
@@ -150,7 +171,7 @@ public class AppTest123 {
 		
 	}
 	
-	@Test(invocationCount=500)
+	@Test(enabled=false)//(invocationCount=500)
 	public void bigBossVote() throws Throwable {
 		
 		FileInputStream fi = new FileInputStream("D:\\NoukriGmailBigBoss\\PropertiesFile\\constants.properties");
@@ -189,17 +210,16 @@ public class AppTest123 {
 //		else {
 //			Assert.assertFalse(false);
 //			test.log(LogStatus.FAIL, "Big Boss Vote Fail");
-//			
-//		
+//				
 //		}
 	}
 	
-	@AfterTest
-	public void close() {
-		
-		
-		driver.quit();
-		
-	}
+//	@AfterTest
+//	public void close() {
+//		
+//		
+//		driver.quit();
+//		
+//	}
 
 }

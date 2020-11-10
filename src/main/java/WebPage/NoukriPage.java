@@ -16,7 +16,7 @@ public class NoukriPage {
 	
 	@FindBy(xpath = "//input[@id='passwordField']") WebElement N_Pwdtextbox;
 	
-	@FindBy(xpath = "//button[@class='waves-effect waves-light btn-large btn-block btn-bold blue-btn']") WebElement Loginbutton;
+	@FindBy(xpath = "waves-effect waves-light btn-large btn-block btn-bold blue-btn textTransform") WebElement Loginbutton;
 	
 	@FindBy(xpath = "//a[@class='fl nLogo']//img") WebElement logo;
 	

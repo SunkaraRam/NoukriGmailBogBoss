@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SystemDirector {
 
@@ -15,9 +16,13 @@ public class SystemDirector {
 		
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("dir")+"./DriversFFGC/chromedriver.exe");
 		
-		System.setProperty("webdriver.chrome.driver", "d://chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "d://LatestDrivers//chromedriver.exe");
 		
-		driver = new ChromeDriver();
+		ChromeOptions co = new ChromeOptions();
+		
+		co.setHeadless(true);
+		
+		driver = new ChromeDriver(co);
 	
 		driver.manage().window().maximize();
 		
@@ -54,7 +59,7 @@ public class SystemDirector {
 //		driver.manage().deleteAllCookies();
 //		
 		
-		
+	System.out.println(allCoockies1.size());	
 		//driver.get("https://google.com");
 	
 		
